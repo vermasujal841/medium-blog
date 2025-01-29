@@ -31,11 +31,11 @@ userRouter.post('/signup', async (c) => {
           name:body.name
         },
       }) 
-      const token = await sign({id:user.id},c.env.JWT_SECRET);
+      const jwt = await sign({
+        id: user.id
+      }, c.env.JWT_SECRET);
     
-      return c.json({
-        jwt:token
-      })
+      return c.text(jwt)
     } catch (e) {
       c.status(403);
       return c.json({error:"error while signing up"});
@@ -68,8 +68,11 @@ userRouter.post('/signup', async (c) => {
         c.status(403);
         return c.json({error:"user not form"})
       } 
-      const jwt = await sign({id:user.id},c.env.JWT_SECRET);
-      return c.json({jwt});
+      const jwt = await sign({
+        id: user.id
+      }, c.env.JWT_SECRET);
+  
+      return c.text(jwt)
     } catch (error) {
       c.status(411)
       return c.text('Invalid creds')
