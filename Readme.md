@@ -3,7 +3,7 @@
 This is a blogging application. The project is built from scratch using a modern tech stack and deployed on Vercel and Cloudflare Workers.
 
 ## Live Demo
-Check out the live app [here](https://medium-blog-bz2f1s4k5-sujals-projects-d94254e2.vercel.app).
+Check out the live app [here](https://medium-blog-ten-pi.vercel.app/).
 ## Features
 
 -   User Authentication (JWT)
