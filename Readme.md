@@ -47,7 +47,7 @@ Follow these instructions to set up the project locally.
  2. Navigate to the project directory:
  
 
-	    cd blogging-app-like-medium
+	    cd medium-blog
 
  3. Install the dependencies:
 	 
